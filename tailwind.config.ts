@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        secondary: "#f97316", // ejemplo: naranja (tailwind naranja-500)
+        secondary: "#f5741c",
         darkBg: "#131424",
       },
       backgroundImage: {
