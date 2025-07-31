@@ -1,4 +1,18 @@
+import React from "react";
+
 import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Instagram, Mail, Github, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiCss3,
+  SiTailwindcss,
+  SiVite,
+  SiGit,
+  SiFigma,
+} from "react-icons/si";
+
 
 export const socialNetworks = [
     {
@@ -21,6 +35,16 @@ export const socialNetworks = [
         logo: <Mail size={30} strokeWidth={1} />,
         src: "#!",
     },
+];
+
+export const techStack = [
+  { id: 1, logo: <SiReact size={24} color="#61DAFB" />, src: null },
+  { id: 2, logo: <SiTypescript size={24} color="#3178C6" />, src: null },
+  { id: 3, logo: <SiJavascript size={24} color="#F7DF1E" />, src: null },
+  { id: 4, logo: <SiCss3 size={24} color="#264de4" />, src: null },
+  { id: 5, logo: <SiTailwindcss size={24} color="#38B2AC" />, src: null },
+  { id: 7, logo: <SiGit size={24} color="#F1502F" />, src: null },
+  { id: 8, logo: <SiFigma size={24} color="#A259FF" />, src: "https://www.figma.com/" },
 ];
 
 

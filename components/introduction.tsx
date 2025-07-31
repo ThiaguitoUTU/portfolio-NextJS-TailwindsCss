@@ -1,6 +1,8 @@
 "use client"
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
+import { techStack } from "@/data";
+import Link from "next/link";
 
 const Introduction = () => {
     return (
@@ -33,13 +35,36 @@ const Introduction = () => {
                        Hola, soy Santiago. Estudiante de Ingeniería de Software.
                         Actualmente me enfoco en el Frontend, combinando diseño y funcionalidad para crear experiencias accesibles, modernas y responsivas.
                     </p>
+                    
+                    <div className="flex flex-wrap items-center justify-center gap-7 text-white">
+  {techStack.map(({ logo, src, id }) =>
+    src ? (
+      <Link
+        key={id}
+        href={src}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-all duration-300 hover:scale-110"
+      >
+        {logo}
+      </Link>
+    ) : (
+      <div key={id} className="transition-all duration-300 hover:scale-110">
+        {logo}
+      </div>
+    )
+  )}
+</div>
+
+
+                    
 
                     <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
                         <a href="/projects" className="px-3 py-2 my-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50">
                             Ver proyectos
                         </a>
                         <a href="/contact"
-                            className="px-3 py-2 my-5 transition-all border-2 cursor-pointer text-md w-fit text-secondary border-secondary rounded-xl hover:shadow-xl hover:shadow-secondary" >
+                            className="px-3 py-2 my-5 transition-all border-2 cursor-pointer text-md w-fit text-secondary border-secondary rounded-xl hover:shadow-xl hover:text-orange-500" >
                             Contacta conmigo
                         </a>
                     </div>

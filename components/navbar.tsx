@@ -18,8 +18,8 @@ const Navbar = () => {
             return (
               <Link key={item.id} href={item.link}>
                 <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-full transition duration-200 ${
-                    isActive ? "bg-orange-500 text-white" : "text-white/70"
+                  className={`flex h-10 w-10 items-center justify-center rounded-full transition duration-200 hover:shadow-xl hover:text-orange-500 ${
+                    isActive ? "bg-orange-500 text-white" : "text-white/70 "
                   }`}
                 >
                   {item.icon}
