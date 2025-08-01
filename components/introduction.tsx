@@ -32,33 +32,28 @@ const Introduction = () => {
                     </h1>
 
                     <p className="mx-auto mb-2 text-xl md:text-xl md:mx-0 md:mb-8">
-                       Hola, soy Santiago. Estudiante de Ingeniería de Software.
-                        Actualmente me enfoco en el Frontend, combinando diseño y funcionalidad para crear experiencias accesibles, modernas y responsivas.
+                      Hi, I’m Santiago, a Software Development student focused on combining design and functionality to build modern, accessible user experiences.
                     </p>
                     
                     <div className="flex flex-wrap items-center justify-center gap-7 text-white">
-  {techStack.map(({ logo, src, id }) =>
-    src ? (
-      <Link
-        key={id}
-        href={src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="transition-all duration-300 hover:scale-110"
-      >
-        {logo}
-      </Link>
-    ) : (
-      <div key={id} className="transition-all duration-300 hover:scale-110">
-        {logo}
-      </div>
-    )
-  )}
-</div>
-
-
-                    
-
+                        {techStack.map(({ logo, src, id }) =>
+                            src ? (
+                            <Link
+                            key={id}
+                            href={src}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-all duration-300 hover:scale-110"
+                            >
+                        {logo}
+                    </Link>
+                    ) : (
+                    <div key={id} className="transition-all duration-300 hover:scale-110">
+                    {logo}
+                    </div>
+                    )
+                )}
+                </div>
                     <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
                         <a href="/projects" className="px-3 py-2 my-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50">
                             Ver proyectos
